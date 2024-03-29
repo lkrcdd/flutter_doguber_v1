@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_doguber_v1/router.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,12 +10,7 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
+    //라우터 내의 화면 트리로 이동.
+    return MaterialApp.router(routerConfig: router);
   }
 }
