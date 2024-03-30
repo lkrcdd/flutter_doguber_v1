@@ -9,15 +9,22 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  void nothing() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Home Screen')),
+      appBar: AppBar(title: const Text('home page')),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () => context.go('/details'),
-          child: const Text('Go to the Details screen'),
-        ),
+        child: Column(children: [
+          ElevatedButton(
+            onPressed: () => context.go('/match'),
+            child: const Text('match'),
+          ),
+          ElevatedButton(onPressed: nothing, child: const Text("community")),
+          ElevatedButton(onPressed: nothing, child: const Text("premium")),
+          ElevatedButton(onPressed: nothing, child: const Text("profile")),
+        ]),
       ),
     );
   }

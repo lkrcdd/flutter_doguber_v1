@@ -9,16 +9,21 @@ class MatchPage extends StatefulWidget {
 }
 
 class _MatchPageState extends State<MatchPage> {
+  void nothing() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Details Screen')),
+      appBar: AppBar(title: const Text('match page')),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () => context.go('/'),
-          child: const Text('Go back to the Home screen'),
-        ),
-      ),
+          child: Column(
+        children: [
+          ElevatedButton(onPressed: nothing, child: const Text("regist")),
+          ElevatedButton(onPressed: nothing, child: const Text("search")),
+          ElevatedButton(onPressed: nothing, child: const Text("match log")),
+          ElevatedButton(onPressed: nothing, child: const Text("chat")),
+        ],
+      )),
     );
   }
 }

@@ -16,7 +16,7 @@ final GoRouter router = GoRouter(
       },
       routes: [
         GoRoute(
-          path: 'details',
+          path: 'match',
           builder: (BuildContext context, GoRouterState state) {
             return const MatchPage();
           },
